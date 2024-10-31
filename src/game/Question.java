@@ -48,7 +48,12 @@ public class Question {
         this.fourthAnswer = fourthAnswer;
     }
 
+    public int getCORRECT_NUMBER_INDEX() {
+        return CORRECT_NUMBER_INDEX;
+    }
+
     public Question(int CORRECT_NUMBER_INDEX) {
         this.CORRECT_NUMBER_INDEX = CORRECT_NUMBER_INDEX;
+
     }
 }
