@@ -12,6 +12,11 @@ public class Question {
         return question;
     }
 
+    public int getCORRECT_NUMBER_INDEX() {
+        return CORRECT_NUMBER_INDEX;
+    }
+
+
     public void setQuestion(String question) {
         this.question = question;
     }
@@ -46,6 +51,15 @@ public class Question {
 
     public void setFourthAnswer(String fourthAnswer) {
         this.fourthAnswer = fourthAnswer;
+    }
+
+    public Question(int CORRECT_NUMBER_INDEX, String question, String firstAnswer, String secondAnswer, String thirdAnswer, String fourthAnswer) {
+        this.CORRECT_NUMBER_INDEX = CORRECT_NUMBER_INDEX;
+        this.fourthAnswer = fourthAnswer;
+        this.thirdAnswer = thirdAnswer;
+        this.secondAnswer = secondAnswer;
+        this.firstAnswer = firstAnswer;
+        this.question = question;
     }
 
     public Question(int CORRECT_NUMBER_INDEX) {
