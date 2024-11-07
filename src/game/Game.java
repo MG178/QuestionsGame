@@ -4,13 +4,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Game {
-    private static int  numberQuestions = 0;
+    private static int numberQuestions = 0;
     private static int correctResults = 0;
+
     public static void startGame() {
         System.out.println("Game started.");
         showQuestions();
-
-
     }
 
     private static void showQuestions() {
@@ -24,8 +23,7 @@ public class Game {
             System.out.println("4. " + Questions.questions[i].getFourthAnswer());
             qetUserAnswer();
         }
-        System.out.println("Вы набрали "+correctResults+" из "+ Questions.questions.length +" правильных ответов!");
-
+        System.out.println("Вы набрали " + correctResults + " из " + Questions.questions.length + " правильных ответов!");
     }
 
     private static void qetUserAnswer() {
@@ -38,22 +36,12 @@ public class Game {
             System.out.println("Неккоретно введён ответ. Попробуй ещё.");
             qetUserAnswer();
         }
-
-
     }
 
     private static void checkAnswer(int userAnswer) {
         if (userAnswer == Questions.questions[numberQuestions].getCORRECT_NUMBER_INDEX()) {
             System.out.println("Вы победили!");
-                    correctResults += 1;
-        } else {
-            System.out.println("Вы проиграли!");
-
-        }
-
-
-
+            correctResults++;
+        } else System.out.println("Вы проиграли!");
     }
-
-
-   }
+}
